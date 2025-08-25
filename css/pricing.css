@@ -467,6 +467,10 @@
   .order-summary-bar {
     display: none !important;
   }
+
+  .order-section-wrap {
+    display: none !important;
+  }
 }
 
 .price-card {
