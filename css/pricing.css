@@ -653,3 +653,62 @@
   color: #334053;
   font-weight: 600;
 }
+
+.bg-lightblue {
+  background: linear-gradient(135deg, #e3f6fc 0%, #f7fcfe 100%) !important;
+}
+.cart-summary-mobile-card {
+  max-width: 540px;
+  margin: 0 auto 8px auto;
+  box-shadow: 0 2px 8px rgba(34, 153, 108, 0.1);
+  border-radius: 18px;
+}
+.checkout-mobile-bar {
+  background: linear-gradient(90deg, #16a870 60%, #24c4bc 100%);
+  box-shadow: 0 -2px 12px rgba(34, 153, 108, 0.14);
+}
+.checkout-bar-btn {
+  color: #fff !important;
+  border: none;
+  letter-spacing: 0.01em;
+  min-height: 56px;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 1.13rem;
+  background: transparent;
+  box-shadow: none;
+}
+.checkout-btn-text {
+  font-size: 0.9rem;
+  line-height: 1.18;
+  font-weight: 500;
+  color: #fff;
+}
+.checkout-btn-price {
+  background: rgba(0, 0, 0, 0.13);
+  color: #fff !important;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  min-width: 96px;
+  text-align: center;
+  display: inline-block;
+  box-shadow: none;
+}
+.checkout-btn-chevron svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+  opacity: 0.86;
+  transition: transform 0.25s;
+}
+.checkout-btn-chevron.active svg {
+  transform: rotate(180deg);
+}
+/* Only visible on mobile (<992px) */
+@media (min-width: 992px) {
+  .cart-summary-mobile-card,
+  .checkout-mobile-bar {
+    display: none !important;
+  }
+}
