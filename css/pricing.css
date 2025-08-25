@@ -483,3 +483,94 @@
     font-size: 0.93rem;
   }
 }
+.bg-lightblue {
+  background: linear-gradient(135deg, #e3f6fc 0%, #f7fcfe 100%) !important;
+}
+.checkout-btn {
+  background: linear-gradient(90deg, #109974 60%, #39c8b3 100%);
+  color: #fff !important;
+  border: none;
+  box-shadow: 0 2px 8px 0 rgba(0, 88, 65, 0.09);
+  transition: background 0.13s;
+  font-size: 15px;
+}
+.checkout-btn:hover {
+  background: linear-gradient(90deg, #098354 60%, #0ac99a 100%);
+}
+
+.checkout-price {
+  color: #fff !important;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 9px;
+  font-size: 1.08em;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.order-chevron {
+  color: #148899;
+}
+
+.order-summary-bar {
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  gap: 20px;
+}
+.bg-lightblue {
+  background: linear-gradient(
+    to bottom,
+    #dcf4f7 0%,
+    rgba(220, 244, 247, 0.4) 100%
+  );
+}
+.checkout-btn {
+  background: linear-gradient(90deg, #109974 60%, #39c8b3 100%);
+  color: #fff !important;
+  border: none;
+  box-shadow: 0 2px 8px 0 rgba(0, 88, 65, 0.09);
+  transition: background 0.13s;
+  font-size: 15px;
+}
+.checkout-btn:hover {
+  background: linear-gradient(90deg, #098354 60%, #0ac99a 100%);
+}
+.checkout-price {
+  color: #fff !important;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 9px;
+  font-size: 1.08em;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.order-chevron {
+  color: #148899;
+}
+
+/* Rounded card for table when visible */
+.order-details-card .cart-table {
+  border-radius: 16px;
+  margin-bottom: 0;
+  margin-top: 0;
+  box-shadow: 0 1px 8px rgba(88, 177, 209, 0.08);
+}
+.order-details-card {
+  transition: all 0.3s;
+  margin-bottom: 0;
+}
+.chevron-icon svg {
+  transition: transform 0.3s;
+}
+.order-section-wrap.open .chevron-icon svg {
+  transform: rotate(180deg);
+}
+
+/* Container style for summary bar */
+.order-summary-bar {
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  gap: 20px;
+}
+
+.text-dark-color {
+  color: #334053;
+  font-weight: 600;
+}
