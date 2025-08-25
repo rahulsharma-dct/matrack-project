@@ -398,7 +398,7 @@
 }
 
 .hardware {
-  gap: 86px;
+  gap: 51px;
 }
 
 /* Mobile Styles: stack + resize */
@@ -462,6 +462,10 @@
 
   .product-1 {
     width: 235px;
+  }
+
+  .order-summary-bar {
+    display: none !important;
   }
 }
 
