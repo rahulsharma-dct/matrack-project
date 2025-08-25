@@ -746,3 +746,7 @@
 .container--styling {
   margin-bottom: 80px;
 }
+
+.hidden-styling {
+  display: none;
+}
