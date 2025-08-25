@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matrack - Fleet Tracking</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+      integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="css/popup.css" />
+    <link rel="stylesheet" href="css/pricing.css" />
+    <link rel="stylesheet" href="css/common.css" />
+  </head>
+  <body>
+    <!-- Announcement Bar -->
+    <section class="container-fluid text-white edit">
+      <div
+        class="announcement-bar d-flex flex-row align-items-center justify-content-center text-center gap-3 py-2"
+      >
+        <div>
+          <span>Claim your exclusive</span>
+          <span class="text-info fw-semibold">15% discount</span>
+          <span class="d-none d-lg-inline-block">before it expires!</span>
+          <span class="text-info fw-semibold d-inline-block d-lg-none"
+            ><a class="text-info text-decoration-none" href="">➜</a></span
+          >
+        </div>
+        <div class="time-span d-none d-lg-block">
+          <span>Time left</span>
+          <span class="px-1 py-1 rounded text-center time-unit">00</span>
+          <span>:</span>
+          <span class="px-1 py-1 rounded text-center time-unit">48</span>
+          <span>:</span>
+          <span class="px-1 py-1 rounded text-center time-unit">58</span>
+        </div>
+        <div class="d-none d-lg-block">
+          <a href="#" class="text-warning text-decoration-none"
+            >GET MY DISCOUNT ➜</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg py-2 px-md-4 px-2">
+      <div class="container-fluid d-flex align-items-center">
+        <a class="navbar-brand order-0" href="#">
+          <img src="img/logo.png" alt="Matrack Logo" class="img-fluid" />
+        </a>
+
+        <button
+          class="navbar-toggler order-3 order-lg-2"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse order-4 order-lg-3" id="navbarNav">
+          <ul class="ms-auto navbar-nav align-items-center gap-2">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle text-center"
+                href="#"
+                id="productDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Product & Services
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="productDropdown">
+                <li>
+                  <a class="dropdown-item text-center" href="#"
+                    >Dashcam & ELD</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item text-center" href="#"
+                    >Trailer Tracking</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item text-center" href="#"
+                    >Fuel Management</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle text-center"
+                href="#"
+                id="whyDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Why Matrack
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="whyDropdown">
+                <li>
+                  <a class="dropdown-item text-center" href="#">Features</a>
+                </li>
+                <li>
+                  <a class="dropdown-item text-center" href="#">Benefits</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle text-center"
+                href="#"
+                id="supportDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Support
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="supportDropdown">
+                <li><a class="dropdown-item text-center" href="#">FAQ</a></li>
+                <li>
+                  <a class="dropdown-item text-center" href="#"
+                    >Contact Support</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact Us</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Log in</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">GPS Activation</a>
+            </li>
+          </ul>
+        </div>
+        <div class="order-now-btn d-flex order-2 order-lg-3">
+          <a href="#" class="btn btn-custom-order"
+            ><svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4 19C4 19.5304 4.21071 20.0391 4.58579 20.4142C4.96086 20.7893 5.46957 21 6 21C6.53043 21 7.03914 20.7893 7.41421 20.4142C7.78929 20.0391 8 19.5304 8 19C8 18.4696 7.78929 17.9609 7.41421 17.5858C7.03914 17.2107 6.53043 17 6 17C5.46957 17 4.96086 17.2107 4.58579 17.5858C4.21071 17.9609 4 18.4696 4 19ZM15 19C15 19.5304 15.2107 20.0391 15.5858 20.4142C15.9609 20.7893 16.4696 21 17 21C17.5304 21 18.0391 20.7893 18.4142 20.4142C18.7893 20.0391 19 19.5304 19 19C19 18.4696 18.7893 17.9609 18.4142 17.5858C18.0391 17.2107 17.5304 17 17 17C16.4696 17 15.9609 17.2107 15.5858 17.5858C15.2107 17.9609 15 18.4696 15 19Z"
+                stroke="#148899"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M17 17H6V3H4"
+                stroke="#148899"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M6 5L20 6L19 13H6"
+                stroke="#148899"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            Cart</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid px-0">
+      <div class="container-fluid my-5">
+        <!-- Heading -->
+        <h2 class="fw-bold text-center mb-4" style="font-size: 2rem">
+          Discover the best GPS devices
+        </h2>
+        <p class="text-center text-muted mb-2">
+          Select Your Device(s) and Quantity
+        </p>
+        <div class="row justify-content-center">
+          <!-- Sidebar (Desktop) -->
+          <div class="col-lg-2 d-none d-lg-block">
+            <div class="p-3" style="min-width: 220px">
+              <!-- Filter Menu -->
+              <div class="mb-4">
+                <div class="btn-group-vertical w-100">
+                  <button
+                    class="btn active fw-semibold text-start mb-2"
+                    style="
+                      background: linear-gradient(
+                        to bottom,
+                        #dcf4f7,
+                        rgba(220, 244, 247, 0.4)
+                      );
+                      font-weight: 500;
+                    "
+                  >
+                    All
+                    <span class="float-end"
+                      ><svg
+                        width="8"
+                        height="14"
+                        viewBox="0 0 8 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1 1L7 7L1 13"
+                          stroke="#334053"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+                <ul class="list-unstyled mt-2 mb-0 ps-0">
+                  <li class="mb-3 filter">
+                    <a
+                      href="#"
+                      class="text-dark text-decoration-none"
+                      style="font-size: 1rem"
+                      >ELD's</a
+                    >
+                  </li>
+                  <li class="mb-3 filter">
+                    <a
+                      href="#"
+                      class="text-dark text-decoration-none"
+                      style="font-size: 1rem"
+                      >Asset Trackers</a
+                    >
+                  </li>
+                  <li class="mb-3 filter">
+                    <a
+                      href="#"
+                      class="text-dark text-decoration-none"
+                      style="font-size: 1rem"
+                      >Vehicle Trackers</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <!-- Review Box -->
+              <div class="mb-4">
+                <div
+                  class="rounded bg-light p-3 text-center border-custom"
+                  style="
+                    background: linear-gradient(
+                      to bottom,
+                      #dcf4f7,
+                      rgba(220, 244, 247, 0.4)
+                    );
+                  "
+                >
+                  <div class="mb-1" style="color: #13c3ee; font-size: 1.3rem">
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6.96164 11.1581L10.2816 13.1661C10.8896 13.5341 11.6336 12.9901 11.4736 12.3021L10.5936 8.52607L13.5296 5.98207C14.0656 5.51807 13.7776 4.63807 13.0736 4.58207L9.20964 4.25407L7.69764 0.686073C7.42564 0.0380733 6.49764 0.0380733 6.22564 0.686073L4.71364 4.24607L0.84964 4.57407C0.14564 4.63007 -0.142361 5.51007 0.39364 5.97407L3.32964 8.51807L2.44964 12.2941C2.28964 12.9821 3.03364 13.5261 3.64164 13.1581L6.96164 11.1581Z"
+                        fill="#39B7D7"
+                      />
+                    </svg>
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6.96164 11.1581L10.2816 13.1661C10.8896 13.5341 11.6336 12.9901 11.4736 12.3021L10.5936 8.52607L13.5296 5.98207C14.0656 5.51807 13.7776 4.63807 13.0736 4.58207L9.20964 4.25407L7.69764 0.686073C7.42564 0.0380733 6.49764 0.0380733 6.22564 0.686073L4.71364 4.24607L0.84964 4.57407C0.14564 4.63007 -0.142361 5.51007 0.39364 5.97407L3.32964 8.51807L2.44964 12.2941C2.28964 12.9821 3.03364 13.5261 3.64164 13.1581L6.96164 11.1581Z"
+                        fill="#39B7D7"
+                      />
+                    </svg>
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6.96164 11.1581L10.2816 13.1661C10.8896 13.5341 11.6336 12.9901 11.4736 12.3021L10.5936 8.52607L13.5296 5.98207C14.0656 5.51807 13.7776 4.63807 13.0736 4.58207L9.20964 4.25407L7.69764 0.686073C7.42564 0.0380733 6.49764 0.0380733 6.22564 0.686073L4.71364 4.24607L0.84964 4.57407C0.14564 4.63007 -0.142361 5.51007 0.39364 5.97407L3.32964 8.51807L2.44964 12.2941C2.28964 12.9821 3.03364 13.5261 3.64164 13.1581L6.96164 11.1581Z"
+                        fill="#39B7D7"
+                      />
+                    </svg>
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6.96164 11.1581L10.2816 13.1661C10.8896 13.5341 11.6336 12.9901 11.4736 12.3021L10.5936 8.52607L13.5296 5.98207C14.0656 5.51807 13.7776 4.63807 13.0736 4.58207L9.20964 4.25407L7.69764 0.686073C7.42564 0.0380733 6.49764 0.0380733 6.22564 0.686073L4.71364 4.24607L0.84964 4.57407C0.14564 4.63007 -0.142361 5.51007 0.39364 5.97407L3.32964 8.51807L2.44964 12.2941C2.28964 12.9821 3.03364 13.5261 3.64164 13.1581L6.96164 11.1581Z"
+                        fill="#39B7D7"
+                      />
+                    </svg>
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6.96164 11.1581L10.2816 13.1661C10.8896 13.5341 11.6336 12.9901 11.4736 12.3021L10.5936 8.52607L13.5296 5.98207C14.0656 5.51807 13.7776 4.63807 13.0736 4.58207L9.20964 4.25407L7.69764 0.686073C7.42564 0.0380733 6.49764 0.0380733 6.22564 0.686073L4.71364 4.24607L0.84964 4.57407C0.14564 4.63007 -0.142361 5.51007 0.39364 5.97407L3.32964 8.51807L2.44964 12.2941C2.28964 12.9821 3.03364 13.5261 3.64164 13.1581L6.96164 11.1581Z"
+                        fill="#39B7D7"
+                      />
+                    </svg>
+                  </div>
+                  <div
+                    class="mb-2 text-dark"
+                    style="font-size: 0.97rem; line-height: 1.3"
+                  >
+                    "Multiple devices for various applications.<br />
+                    Easy install. Inexpensive."
+                  </div>
+                  <div
+                    class=""
+                    style="
+                      font-size: 0.96rem;
+                      font-weight: 500;
+                      margin-top: 14px;
+                    "
+                  >
+                    Charlie W.
+                  </div>
+                </div>
+              </div>
+              <div
+                class="py-3 px-3 border-top"
+                style="max-width: 260px; background: #fff"
+              >
+                <!-- Forbes Award -->
+                <div class="mb-4 text-center">
+                  <div
+                    class="award-item-1 d-flex flex-column align-items-center align-items-md-center mb-3"
+                  >
+                    <img
+                      src="img/other-logo.png"
+                      alt="Forbes"
+                      style="width: 102px"
+                    />
+                    <div class="award-text-1 mt-2">Best affordable ELD</div>
+                  </div>
+                </div>
+
+                <!-- Ratings -->
+                <div>
+                  <div
+                    class="d-flex flex-column align-items-center text-center capterra mb-4"
+                  >
+                    <img
+                      src="img/other-logo-1.png"
+                      alt="Capterra"
+                      style="height: 28px; margin-bottom: 3px; width: 132px"
+                    />
+                    <div>
+                      <div>
+                        <!-- 5 yellow filled stars using Remix Icon -->
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 11 10"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M5.48584 8.14577L7.91089 9.61248C8.35499 9.88128 8.89843 9.48392 8.78156 8.98139L8.13878 6.22326L10.2833 4.36504C10.6749 4.02612 10.4645 3.38333 9.95026 3.34243L7.12786 3.10285L6.02344 0.496654C5.82476 0.0233322 5.14692 0.0233322 4.94824 0.496654L3.84383 3.097L1.02143 3.33658C0.507199 3.37749 0.296834 4.02027 0.688347 4.35919L2.8329 6.21742L2.19012 8.97554C2.07325 9.47808 2.61669 9.87544 3.0608 9.60664L5.48584 8.14577Z"
+                            fill="#FCCA0D"
+                          />
+                        </svg>
+
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 11 10"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M5.48584 8.14577L7.91089 9.61248C8.35499 9.88128 8.89843 9.48392 8.78156 8.98139L8.13878 6.22326L10.2833 4.36504C10.6749 4.02612 10.4645 3.38333 9.95026 3.34243L7.12786 3.10285L6.02344 0.496654C5.82476 0.0233322 5.14692 0.0233322 4.94824 0.496654L3.84383 3.097L1.02143 3.33658C0.507199 3.37749 0.296834 4.02027 0.688347 4.35919L2.8329 6.21742L2.19012 8.97554C2.07325 9.47808 2.61669 9.87544 3.0608 9.60664L5.48584 8.14577Z"
+                            fill="#FCCA0D"
+                          />
+                        </svg>
+
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 11 10"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M5.48584 8.14577L7.91089 9.61248C8.35499 9.88128 8.89843 9.48392 8.78156 8.98139L8.13878 6.22326L10.2833 4.36504C10.6749 4.02612 10.4645 3.38333 9.95026 3.34243L7.12786 3.10285L6.02344 0.496654C5.82476 0.0233322 5.14692 0.0233322 4.94824 0.496654L3.84383 3.097L1.02143 3.33658C0.507199 3.37749 0.296834 4.02027 0.688347 4.35919L2.8329 6.21742L2.19012 8.97554C2.07325 9.47808 2.61669 9.87544 3.0608 9.60664L5.48584 8.14577Z"
+                            fill="#FCCA0D"
+                          />
+                        </svg>
+
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 11 10"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M5.48584 8.14577L7.91089 9.61248C8.35499 9.88128 8.89843 9.48392 8.78156 8.98139L8.13878 6.22326L10.2833 4.36504C10.6749 4.02612 10.4645 3.38333 9.95026 3.34243L7.12786 3.10285L6.02344 0.496654C5.82476 0.0233322 5.14692 0.0233322 4.94824 0.496654L3.84383 3.097L1.02143 3.33658C0.507199 3.37749 0.296834 4.02027 0.688347 4.35919L2.8329 6.21742L2.19012 8.97554C2.07325 9.47808 2.61669 9.87544 3.0608 9.60664L5.48584 8.14577Z"
+                            fill="#FCCA0D"
+                          />
+                        </svg>
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 11 10"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M5.48584 8.14577L7.91089 9.61248C8.35499 9.88128 8.89843 9.48392 8.78156 8.98139L8.13878 6.22326L10.2833 4.36504C10.6749 4.02612 10.4645 3.38333 9.95026 3.34243L7.12786 3.10285L6.02344 0.496654C5.82476 0.0233322 5.14692 0.0233322 4.94824 0.496654L3.84383 3.097L1.02143 3.33658C0.507199 3.37749 0.296834 4.02027 0.688347 4.35919L2.8329 6.21742L2.19012 8.97554C2.07325 9.47808 2.61669 9.87544 3.0608 9.60664L5.48584 8.14577Z"
+                            fill="#FCCA0D"
+                          />
+                        </svg>
+
+                        <span
+                          class="fw-semibold ms-1"
+                          style="font-size: 0.88rem; color: #546491"
+                          >5.0</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Google -->
+                  <div
+                    class="d-flex flex-column align-items-center text-center mb-4"
+                  >
+                    <img
+                      src="img/google.png"
+                      style="height: 35px; margin-bottom: 3px; width: 102px"
+                    />
+                    <div>
+                      <div>
+                        <!-- 5 yellow filled stars using Remix Icon -->
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 11 10"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M5.48584 8.14577L7.91089 9.61248C8.35499 9.88128 8.89843 9.48392 8.78156 8.98139L8.13878 6.22326L10.2833 4.36504C10.6749 4.02612 10.4645 3.38333 9.95026 3.34243L7.12786 3.10285L6.02344 0.496654C5.82476 0.0233322 5.14692 0.0233322 4.94824 0.496654L3.84383 3.097L1.02143 3.33658C0.507199 3.37749 0.296834 4.02027 0.688347 4.35919L2.8329 6.21742L2.19012 8.97554C2.07325 9.47808 2.61669 9.87544 3.0608 9.60664L5.48584 8.14577Z"
+                            fill="#FCCA0D"
+                          />
+                        </svg>
+
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 11 10"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M5.48584 8.14577L7.91089 9.61248C8.35499 9.88128 8.89843 9.48392 8.78156 8.98139L8.13878 6.22326L10.2833 4.36504C10.6749 4.02612 10.4645 3.38333 9.95026 3.34243L7.12786 3.10285L6.02344 0.496654C5.82476 0.0233322 5.14692 0.0233322 4.94824 0.496654L3.84383 3.097L1.02143 3.33658C0.507199 3.37749 0.296834 4.02027 0.688347 4.35919L2.8329 6.21742L2.19012 8.97554C2.07325 9.47808 2.61669 9.87544 3.0608 9.60664L5.48584 8.14577Z"
+                            fill="#FCCA0D"
+                          />
+                        </svg>
+
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 11 10"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M5.48584 8.14577L7.91089 9.61248C8.35499 9.88128 8.89843 9.48392 8.78156 8.98139L8.13878 6.22326L10.2833 4.36504C10.6749 4.02612 10.4645 3.38333 9.95026 3.34243L7.12786 3.10285L6.02344 0.496654C5.82476 0.0233322 5.14692 0.0233322 4.94824 0.496654L3.84383 3.097L1.02143 3.33658C0.507199 3.37749 0.296834 4.02027 0.688347 4.35919L2.8329 6.21742L2.19012 8.97554C2.07325 9.47808 2.61669 9.87544 3.0608 9.60664L5.48584 8.14577Z"
+                            fill="#FCCA0D"
+                          />
+                        </svg>
+
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 11 10"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M5.48584 8.14577L7.91089 9.61248C8.35499 9.88128 8.89843 9.48392 8.78156 8.98139L8.13878 6.22326L10.2833 4.36504C10.6749 4.02612 10.4645 3.38333 9.95026 3.34243L7.12786 3.10285L6.02344 0.496654C5.82476 0.0233322 5.14692 0.0233322 4.94824 0.496654L3.84383 3.097L1.02143 3.33658C0.507199 3.37749 0.296834 4.02027 0.688347 4.35919L2.8329 6.21742L2.19012 8.97554C2.07325 9.47808 2.61669 9.87544 3.0608 9.60664L5.48584 8.14577Z"
+                            fill="#FCCA0D"
+                          />
+                        </svg>
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 11 10"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M5.48584 8.14577L7.91089 9.61248C8.35499 9.88128 8.89843 9.48392 8.78156 8.98139L8.13878 6.22326L10.2833 4.36504C10.6749 4.02612 10.4645 3.38333 9.95026 3.34243L7.12786 3.10285L6.02344 0.496654C5.82476 0.0233322 5.14692 0.0233322 4.94824 0.496654L3.84383 3.097L1.02143 3.33658C0.507199 3.37749 0.296834 4.02027 0.688347 4.35919L2.8329 6.21742L2.19012 8.97554C2.07325 9.47808 2.61669 9.87544 3.0608 9.60664L5.48584 8.14577Z"
+                            fill="#FCCA0D"
+                          />
+                        </svg>
+
+                        <span
+                          class="fw-semibold ms-1"
+                          style="font-size: 0.88rem; color: #546491"
+                          >5.0</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Shopper Approved -->
+                  <div
+                    class="d-flex flex-column align-items-center text-center capterra mb-4"
+                  >
+                    <img
+                      src="img/shopper-approved.png"
+                      style="height: 35px; margin-bottom: 3px; width: 102px"
+                    />
+                    <div>
+                      <div>
+                        <!-- 5 yellow filled stars using Remix Icon -->
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 11 10"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M5.48584 8.14577L7.91089 9.61248C8.35499 9.88128 8.89843 9.48392 8.78156 8.98139L8.13878 6.22326L10.2833 4.36504C10.6749 4.02612 10.4645 3.38333 9.95026 3.34243L7.12786 3.10285L6.02344 0.496654C5.82476 0.0233322 5.14692 0.0233322 4.94824 0.496654L3.84383 3.097L1.02143 3.33658C0.507199 3.37749 0.296834 4.02027 0.688347 4.35919L2.8329 6.21742L2.19012 8.97554C2.07325 9.47808 2.61669 9.87544 3.0608 9.60664L5.48584 8.14577Z"
+                            fill="#FCCA0D"
+                          />
+                        </svg>
+
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 11 10"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M5.48584 8.14577L7.91089 9.61248C8.35499 9.88128 8.89843 9.48392 8.78156 8.98139L8.13878 6.22326L10.2833 4.36504C10.6749 4.02612 10.4645 3.38333 9.95026 3.34243L7.12786 3.10285L6.02344 0.496654C5.82476 0.0233322 5.14692 0.0233322 4.94824 0.496654L3.84383 3.097L1.02143 3.33658C0.507199 3.37749 0.296834 4.02027 0.688347 4.35919L2.8329 6.21742L2.19012 8.97554C2.07325 9.47808 2.61669 9.87544 3.0608 9.60664L5.48584 8.14577Z"
+                            fill="#FCCA0D"
+                          />
+                        </svg>
+
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 11 10"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M5.48584 8.14577L7.91089 9.61248C8.35499 9.88128 8.89843 9.48392 8.78156 8.98139L8.13878 6.22326L10.2833 4.36504C10.6749 4.02612 10.4645 3.38333 9.95026 3.34243L7.12786 3.10285L6.02344 0.496654C5.82476 0.0233322 5.14692 0.0233322 4.94824 0.496654L3.84383 3.097L1.02143 3.33658C0.507199 3.37749 0.296834 4.02027 0.688347 4.35919L2.8329 6.21742L2.19012 8.97554C2.07325 9.47808 2.61669 9.87544 3.0608 9.60664L5.48584 8.14577Z"
+                            fill="#FCCA0D"
+                          />
+                        </svg>
+
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 11 10"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M5.48584 8.14577L7.91089 9.61248C8.35499 9.88128 8.89843 9.48392 8.78156 8.98139L8.13878 6.22326L10.2833 4.36504C10.6749 4.02612 10.4645 3.38333 9.95026 3.34243L7.12786 3.10285L6.02344 0.496654C5.82476 0.0233322 5.14692 0.0233322 4.94824 0.496654L3.84383 3.097L1.02143 3.33658C0.507199 3.37749 0.296834 4.02027 0.688347 4.35919L2.8329 6.21742L2.19012 8.97554C2.07325 9.47808 2.61669 9.87544 3.0608 9.60664L5.48584 8.14577Z"
+                            fill="#FCCA0D"
+                          />
+                        </svg>
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 11 10"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M5.48584 8.14577L7.91089 9.61248C8.35499 9.88128 8.89843 9.48392 8.78156 8.98139L8.13878 6.22326L10.2833 4.36504C10.6749 4.02612 10.4645 3.38333 9.95026 3.34243L7.12786 3.10285L6.02344 0.496654C5.82476 0.0233322 5.14692 0.0233322 4.94824 0.496654L3.84383 3.097L1.02143 3.33658C0.507199 3.37749 0.296834 4.02027 0.688347 4.35919L2.8329 6.21742L2.19012 8.97554C2.07325 9.47808 2.61669 9.87544 3.0608 9.60664L5.48584 8.14577Z"
+                            fill="#FCCA0D"
+                          />
+                        </svg>
+
+                        <span
+                          class="fw-semibold ms-1"
+                          style="font-size: 0.88rem; color: #546491"
+                          >5.0</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Filter Buttons (Mobile) -->
+          <div
+            class="d-flex d-lg-none justify-content-between my-2 gap-2 px-1"
+            style="flex-wrap: nowrap"
+          >
+            <button
+              class="btn fw-semibold py-3 flex-fill active"
+              style="
+                background: linear-gradient(135deg, #e3f6fc 0%, #f7fcfe 100%);
+                color: #3c586f;
+              "
+            >
+              All
+            </button>
+            <button
+              class="btn fw-semibold py-3 flex-fill"
+              style="background: #f3f4f6; color: #46516c"
+            >
+              ELD's
+            </button>
+            <button
+              class="btn fw-semibold py-3 flex-fill"
+              style="background: #f3f4f6; color: #46516c"
+            >
+              Asset Trackers
+            </button>
+            <button
+              class="btn fw-semibold py-3 flex-fill"
+              style="background: #f3f4f6; color: #46516c"
+            >
+              Vehicle Trackers
+            </button>
+          </div>
+
+          <!-- Main Content - Device Cards -->
+          <div class="col-lg-10">
+            <!-- Matrack ELD Card -->
+
+            <!-- Desktop -->
+            <!-- Matrack ELD Card Responsive (matches your screenshots) -->
+            <div class="bg-white p-4 custom-radius mb-4">
+              <div class="row align-items-start">
+                <!-- Image and Device Label (on top for mobile, left on desktop) -->
+                <div class="col-md-3 text-center text-md-start mb-3 mb-md-0">
+                  <span
+                    class="badge mb-2 px-3 py-2"
+                    style="
+                      background: linear-gradient(
+                        135deg,
+                        #e3f6fc 0%,
+                        #f7fcfe 100%
+                      );
+                      font-size: 15px;
+                      border-radius: 12px;
+                      color: #148899;
+                      font-weight: 500;
+                    "
+                  >
+                    Electronic Logging Device
+                  </span>
+                  <img
+                    src="img/image (29).png"
+                    alt="Matrack ELD"
+                    class="img-fluid"
+                    style="max-width: 270px"
+                  />
+                </div>
+                <!-- Details -->
+                <div class="col-md-9">
+                  <div class="device-badge">
+                    <span class="icon-check"></span>
+                    <div class="icon-free">
+                      <span class="device-free">FREE Device</span> with any
+                      subscription plan
+                    </div>
+                  </div>
+
+                  <h3 class="fw-bold mt-2 mb-1" style="font-size: 2rem">
+                    Matrack ELD
+                  </h3>
+                  <p class="mb-1" style="color: #637187">
+                    MaTrack ELD is fully FMCSA Compliant Electronic Logging
+                    Device. It is engineered with Bluetooth Low Energy
+                    Technology, draws low power from the main vehicle battery.
+                  </p>
+                  <a
+                    href="#"
+                    class="text-info mb-2 d-block"
+                    style="
+                      font-size: 15px;
+                      text-decoration: none;
+                      border-bottom: 1px solid #ededed;
+                      padding-bottom: 15px;
+                    "
+                    >Read more</a
+                  >
+
+                  <!-- Country Select -->
+                  <div class="country-select-responsive">
+                    <select class="custom-country-select">
+                      <option>For USA</option>
+                    </select>
+                  </div>
+
+                  <!-- Plan Selection -->
+                  <div>
+                    <div class="plan-info">
+                      <div class="plan-title">Choose monthly plan:</div>
+                      <div class="plan-note">
+                        Subscription billed monthly for each device to keep
+                        tracking active.
+                      </div>
+                    </div>
+
+                    <div class="d-flex gap-3 flex-wrap">
+                      <!-- BASIC PLAN CARD -->
+                      <div
+                        class="plan-card plan-card-active flex-fill position-relative"
+                      >
+                        <div
+                          class="d-flex justify-content-between align-items-center mb-2"
+                        >
+                          <span class="badge plan-basic-badge">Basic</span>
+                          <span class="plan-card-check"
+                            ><svg
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M10.2933 13.8412L8.08714 11.6677C7.90451 11.4853 7.70791 11.3919 7.49736 11.3875C7.28703 11.3833 7.08626 11.4767 6.89506 11.6677C6.70407 11.8589 6.60857 12.0631 6.60857 12.2802C6.60857 12.4974 6.70407 12.7015 6.89506 12.8927L9.5578 15.5555C9.77429 15.7718 10.0195 15.8799 10.2933 15.8799C10.5671 15.8799 10.8123 15.7718 11.0288 15.5555L17.0796 9.50473C17.262 9.32209 17.3554 9.12 17.3598 8.89846C17.364 8.67714 17.2706 8.47088 17.0796 8.27967C16.8884 8.08868 16.6897 7.99319 16.4835 7.99319C16.2774 7.99319 16.0787 8.08868 15.8875 8.27967L10.2933 13.8412ZM12.0023 24C10.3575 24 8.80571 23.6877 7.34703 23.0631C5.88835 22.4385 4.61165 21.579 3.51692 20.4847C2.4222 19.3904 1.56231 18.1143 0.937253 16.6563C0.312417 15.1982 0 13.6469 0 12.0023C0 10.3355 0.312308 8.77824 0.936923 7.33055C1.56154 5.88286 2.42099 4.61165 3.51528 3.51692C4.60956 2.4222 5.88572 1.56231 7.34374 0.937253C8.80176 0.312417 10.3531 0 11.9977 0C13.6645 0 15.2218 0.312307 16.6695 0.936923C18.1171 1.56154 19.3884 2.42099 20.4831 3.51528C21.5778 4.60956 22.4377 5.88022 23.0627 7.32725C23.6876 8.77429 24 10.3311 24 11.9977C24 13.6425 23.6877 15.1943 23.0631 16.653C22.4385 18.1116 21.579 19.3884 20.4847 20.4831C19.3904 21.5778 18.1198 22.4377 16.6727 23.0627C15.2257 23.6876 13.6689 24 12.0023 24Z"
+                                fill="url(#paint0_linear_1_462)"
+                              />
+                              <defs>
+                                <linearGradient
+                                  id="paint0_linear_1_462"
+                                  x1="0"
+                                  y1="12"
+                                  x2="24"
+                                  y2="12"
+                                  gradientUnits="userSpaceOnUse"
+                                >
+                                  <stop stop-color="#009600" />
+                                  <stop offset="1" stop-color="#18ADC0" />
+                                </linearGradient>
+                              </defs>
+                            </svg>
+                          </span>
+                        </div>
+                        <span class="fw-bold plan-card-price">
+                          $19.95
+                          <span class="text-muted-1">/month each</span>
+                        </span>
+                        <ul class="mt-3 ps-3 mb-0 plan-list">
+                          <li>HOS logs</li>
+                          <li>FMCSA compliance</li>
+                        </ul>
+                      </div>
+                      <!-- PREMIUM PLAN CARD -->
+                      <div class="plan-card flex-fill position-relative">
+                        <div
+                          class="d-flex justify-content-between align-items-center mb-2"
+                        >
+                          <span class="badge plan-premium-badge">Premium</span>
+                          <span class="plan-card-radio"></span>
+                        </div>
+                        <span class="fw-bold plan-card-price">
+                          $24.95
+                          <span class="text-muted-1">/month each</span>
+                        </span>
+                        <ul class="mt-3 ps-3 mb-0 plan-list">
+                          <li>
+                            <span class="fw-semibold"
+                              ><span class="text-info">All</span> Basic
+                              features</span
+                            >
+                          </li>
+                          <li class="fw-semibold">
+                            <span class="text-info">Real-time</span> GPS
+                          </li>
+                          <li>IFTA reports</li>
+                          <li>Alerts</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="qty-price-row">
+                    <div>
+                      <label class="qty-label">Device Quantity:</label>
+                    </div>
+                    <div class="d-flex align-items-center qty-price-row-1">
+                      <div class="quantity-box">
+                        <button class="qty-btn" type="button">−</button>
+                        <span class="qty-value">3</span>
+                        <button class="qty-btn" type="button">+</button>
+                      </div>
+                      <div class="d-flex align-items-md-start dollar">
+                        <span class="price-main">$59.85</span>
+                        <span class="price-detail"> / 3 months in total</span>
+                      </div>
+                      <!-- Mobile/Asset tracker ke liye: /3 Devices + 3 months in total -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- MA Asset Classic Card -->
+            <div class="bg-white custom-radius p-4 mb-4">
+              <div
+                class="d-flex flex-column align-items-start flex-md-row gap-3 mb-3"
+              >
+                <div>
+                  <span
+                    class="badge mb-2 px-3 py-2"
+                    style="
+                      background: linear-gradient(
+                        135deg,
+                        #e3f6fc 0%,
+                        #f7fcfe 100%
+                      );
+                      font-size: 15px;
+                      border-radius: 12px;
+                      color: #148899;
+                      font-weight: 500;
+                    "
+                  >
+                    Asset Trackers
+                  </span>
+                  <img
+                    src="img/product2.png"
+                    alt="MA Asset Classic"
+                    class="img-fluid product-1"
+                    style="max-width: 302px; padding-top: 29px"
+                  />
+                </div>
+                <div class="flex-fill">
+                  <h4 class="fw-bold mb-1">MA Asset Classic</h4>
+                  <p class="text-muted mb-2" style="font-size: 15px">
+                    The MA-Asset Classic is considered to be our standard in the
+                    world of asset tracking systems, simple sturdy, and with
+                    enduring battery power, this piece of equipment practically
+                    sells itself.
+                  </p>
+                  <div class="read-more">
+                    <a
+                      href="#"
+                      class="text-info d-inline-block mb-2"
+                      style="font-size: 15px; text-decoration: none"
+                      >Read more</a
+                    >
+                  </div>
+                  <div class="price-card">
+                    <div class="price-card-col">
+                      <div class="price-label">Price per device</div>
+                      <div class="d-flex align-items-lg-start">
+                        <span class="price-value">$50</span>
+                        <span class="price-desc">/pay once for device*</span>
+                      </div>
+                    </div>
+                    <div class="price-card-col border-col">
+                      <div class="price-label">Monthly plan cost</div>
+                      <div class="d-flex align-items-lg-start">
+                        <span class="price-value">$11.95</span>
+                        <span class="price-desc">/month each</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="qty-price-row">
+                    <div>
+                      <label class="qty-label">Device Quantity:</label>
+                    </div>
+                    <div class="d-flex align-items-center qty-price-row-1">
+                      <div class="quantity-box">
+                        <button class="qty-btn" type="button">−</button>
+                        <span class="qty-value">3</span>
+                        <button class="qty-btn" type="button">+</button>
+                      </div>
+                      <div class="d-flex align-items-md-start dollar">
+                        <span class="price-main">$59.85</span>
+                        <span class="price-detail"> / 3 months in total</span>
+                      </div>
+                      <!-- Mobile/Asset tracker ke liye: /3 Devices + 3 months in total -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-overlay hidden" id="modalOverlay">
+      <div class="modal-custom" id="modal">
+        <!-- Close Button -->
+        <button
+          class="close-button"
+          onclick="hideModal()"
+          aria-label="Close modal"
+        >
+          ×
+        </button>
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h1 class="modal-title-custom">Thank you for your order!</h1>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="modal-body-custom">
+          <p class="modal-text-custom">
+            We're already processing it and will get in touch with you shortly.
+            Please keep an eye on your email or phone — our team will contact
+            you soon.
+          </p>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="modal-footer">
+          <button class="back-home-button" onclick="goHome()">
+            Back to Home
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer-section">
+      <div class="container-fluid">
+        <div class="main-footer-content">
+          <!-- Company Info Section -->
+          <div class="company-section">
+            <div class="footer-logo">
+              <img src="img/logo.png" alt="Matrack Logo" />
+            </div>
+
+            <p class="company-description">
+              Matrack Incorporated is the leading provider of GPS fleet
+              management solutions for the trucking industry, continuously
+              striving to provide our customers with cutting edge technology at
+              the most affordable price, backed by best in class customer
+              support.
+            </p>
+
+            <!-- Rating Section -->
+            <div class="rating-row gap-4">
+              <div class="rating-item">
+                <img src="img/google.png" alt="Google" />
+                <div class="rating-stars">★★★★★</div>
+                <div class="rating-score">5.0</div>
+              </div>
+              <div class="rating-item">
+                <img src="img/shopper-white.png" alt="Shopper Approved" />
+                <div class="rating-stars">★★★★★</div>
+                <div class="rating-score">5.0</div>
+              </div>
+              <div class="rating-item">
+                <img src="img/capterra.png" alt="Capterra" />
+                <div class="rating-stars">★★★★★</div>
+                <div class="rating-score">4.8</div>
+              </div>
+            </div>
+
+            <!-- Awards Section -->
+            <div class="awards-row">
+              <div class="award-item">
+                <img src="img/forbes.png" alt="Forbes" />
+                <div class="award-text">Best affordable ELD</div>
+              </div>
+              <div class="award-item">
+                <img src="img/tech.png" alt="tech.co" />
+                <div class="award-text">Best rated ELD</div>
+              </div>
+              <div class="award-item">
+                <img src="img/natm.png" alt="NATM" />
+                <div class="award-text">Winner of NATM 2024</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation Section -->
+          <div class="nav-section">
+            <!-- Services Links -->
+            <div class="nav-column">
+              <div class="footer-links">
+                <ul>
+                  <li><a href="#">GPS Fleet Tracking</a></li>
+                  <li><a href="#">Fleet Dash Cams</a></li>
+                  <li><a href="#">ELD</a></li>
+                  <li><a href="#">Fleet Fuel Card</a></li>
+                  <li><a href="#">Assets & Trailer Tracking</a></li>
+                  <li><a href="#">Truck Factoring</a></li>
+                  <li><a href="#">ATV Tracking Devices</a></li>
+                  <li><a href="#">Boat Tracking Devices</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Company Links -->
+            <div class="nav-column">
+              <div class="footer-links">
+                <ul>
+                  <li><a href="#">Case Studies</a></li>
+                  <li><a href="#">Testimonials</a></li>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="#">Careers</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">Log In</a></li>
+                  <li><a href="#">GPS Activation</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="contact-section">
+              <div class="contact-item">
+                <div class="contact-header">
+                  <svg
+                    width="18"
+                    height="12"
+                    viewBox="0 0 18 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M2.86828 0H16.1183C17.3683 0 17.9983 0.59 17.9983 1.79V10.21C17.9983 11.4 17.3683 12 16.1183 12H2.86828C1.61828 12 0.988281 11.4 0.988281 10.21V1.79C0.988281 0.59 1.61828 0 2.86828 0ZM9.48828 8.6L16.2283 3.07C16.4683 2.87 16.6583 2.41 16.3583 2C16.0683 1.59 15.5383 1.58 15.1883 1.83L9.48828 5.69L3.79828 1.83C3.44828 1.58 2.91828 1.59 2.62828 2C2.32828 2.41 2.51828 2.87 2.75828 3.07L9.48828 8.6Z"
+                      fill="#39B7D7"
+                    />
+                  </svg>
+
+                  <span class="contact-title">support.gps@matrackinc.com</span>
+                </div>
+                <div class="contact-details">
+                  We are available on email 24/7<br />
+                  Feel free to contact us anytime
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-header">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.0226 10.7161L11.9059 10.4745C11.657 10.4452 11.1681 10.5551 11.1681 10.5551C11.1681 10.5551 10.7164 10.7722 10.5393 10.9495L9.00593 12.4828C6.64042 11.2794 4.71764 9.35665 3.51426 6.99115L5.05593 5.44948C5.41426 5.09115 5.58926 4.59115 5.53093 4.08281L5.28926 1.98281C5.24219 1.57622 5.04715 1.20117 4.74131 0.929142C4.43548 0.657117 4.04023 0.507146 3.63093 0.507815H2.18926C1.24759 0.507815 0.464259 1.29115 0.522592 2.23281C0.964259 9.34948 6.65593 15.0328 13.7643 15.4745C14.7059 15.5328 15.4893 14.7495 15.4893 13.8078V12.3661C15.4976 11.5245 14.8643 10.8161 14.0226 10.7161Z"
+                      fill="#39B7D7"
+                    />
+                  </svg>
+
+                  <span class="contact-title">+1-855-658-7225</span>
+                </div>
+                <div class="contact-details">
+                  We are available on phone<br />
+                  Mon – Fri: 24 hours<br />
+                  Sat – Sun: 9:00 AM – 5:00 PM (Pacific Time).
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-header">
+                  <svg
+                    width="12"
+                    height="18"
+                    viewBox="0 0 12 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M11.8385 6.5013C11.8385 5.73526 11.6877 4.97671 11.3945 4.26898C11.1014 3.56125 10.6717 2.91819 10.13 2.37651C9.58832 1.83484 8.94526 1.40516 8.23753 1.112C7.5298 0.818852 6.77125 0.667969 6.00521 0.667969C5.23916 0.667969 4.48062 0.818852 3.77289 1.112C3.06516 1.40516 2.42209 1.83484 1.88042 2.37651C1.33874 2.91819 0.909063 3.56125 0.615911 4.26898C0.322758 4.97671 0.171875 5.73526 0.171875 6.5013C0.171875 7.65714 0.512708 8.73214 1.09271 9.6388H1.08604L6.00521 17.3346L10.9244 9.6388H10.9185C11.5193 8.70264 11.8386 7.61365 11.8385 6.5013ZM6.00521 9.0013C5.34217 9.0013 4.70628 8.73791 4.23744 8.26907C3.7686 7.80023 3.50521 7.16434 3.50521 6.5013C3.50521 5.83826 3.7686 5.20238 4.23744 4.73354C4.70628 4.26469 5.34217 4.0013 6.00521 4.0013C6.66825 4.0013 7.30413 4.26469 7.77298 4.73354C8.24182 5.20238 8.50521 5.83826 8.50521 6.5013C8.50521 7.16434 8.24182 7.80023 7.77298 8.26907C7.30413 8.73791 6.66825 9.0013 6.00521 9.0013Z"
+                      fill="#39B7D7"
+                    />
+                  </svg>
+
+                  <span class="contact-title">Matrack Inc.</span>
+                </div>
+                <div class="contact-details">
+                  2603 Camino Ramon Suite. 575<br />
+                  San Ramon, CA 94583, United States
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social Media and Bottom Links -->
+        <div class="social-section">
+          <div class="social-row">
+            <div class="social-icons">
+              <a href="#"
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M22 12.3033C22 6.7467 17.5229 2.24219 12 2.24219C6.47715 2.24219 2 6.7467 2 12.3033C2 17.325 5.65684 21.4874 10.4375 22.2422V15.2116H7.89844V12.3033H10.4375V10.0867C10.4375 7.56515 11.9305 6.17231 14.2146 6.17231C15.3088 6.17231 16.4531 6.36882 16.4531 6.36882V8.8448H15.1922C13.95 8.8448 13.5625 9.62041 13.5625 10.4161V12.3033H16.3359L15.8926 15.2116H13.5625V22.2422C18.3432 21.4874 22 17.3252 22 12.3033Z"
+                    fill="#39B7D7"
+                  />
+                </svg>
+              </a>
+              <a href="#">
+                <svg
+                  width="18"
+                  height="17"
+                  viewBox="0 0 18 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14.1761 0.242188H16.9362L10.9061 7.01959L18 16.2422H12.4456L8.0951 10.6488L3.11723 16.2422H0.35544L6.80517 8.99299L0 0.242188H5.69545L9.6279 5.35481L14.1761 0.242188ZM13.2073 14.6176H14.7368L4.86441 1.78147H3.2232L13.2073 14.6176Z"
+                    fill="#39B7D7"
+                  />
+                </svg>
+              </a>
+              <a href="#">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21.593 7.20301C21.4791 6.78041 21.2565 6.39501 20.9474 6.08518C20.6382 5.77534 20.2533 5.55187 19.831 5.43701C18.265 5.00701 12 5.00001 12 5.00001C12 5.00001 5.73599 4.99301 4.16899 5.40401C3.74692 5.52415 3.36282 5.75078 3.05356 6.06214C2.7443 6.3735 2.52028 6.75913 2.40299 7.18201C1.98999 8.74801 1.98599 11.996 1.98599 11.996C1.98599 11.996 1.98199 15.26 2.39199 16.81C2.62199 17.667 3.29699 18.344 4.15499 18.575C5.73699 19.005 11.985 19.012 11.985 19.012C11.985 19.012 18.25 19.019 19.816 18.609C20.2385 18.4943 20.6237 18.2714 20.9336 17.9622C21.2436 17.653 21.4674 17.2682 21.583 16.846C21.997 15.281 22 12.034 22 12.034C22 12.034 22.02 8.76901 21.593 7.20301ZM9.99599 15.005L10.001 9.00501L15.208 12.01L9.99599 15.005Z"
+                    fill="#39B7D7"
+                  />
+                </svg>
+              </a>
+              <a href="#"
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M4.5 3.24219C3.67157 3.24219 3 3.91376 3 4.74219V19.7422C3 20.5706 3.67157 21.2422 4.5 21.2422H19.5C20.3284 21.2422 21 20.5706 21 19.7422V4.74219C21 3.91376 20.3284 3.24219 19.5 3.24219H4.5ZM8.52076 7.24491C8.52639 8.20116 7.81061 8.79038 6.96123 8.78616C6.16107 8.78194 5.46357 8.14491 5.46779 7.24632C5.47201 6.40116 6.13998 5.72194 7.00764 5.74163C7.88795 5.76132 8.52639 6.40679 8.52076 7.24491ZM12.2797 10.0039H9.75971H9.7583V18.5638H12.4217V18.3641C12.4217 17.9842 12.4214 17.6042 12.4211 17.2241C12.4203 16.2103 12.4194 15.1954 12.4246 14.1819C12.426 13.9358 12.4372 13.6799 12.5005 13.445C12.7381 12.5675 13.5271 12.0008 14.4074 12.1401C14.9727 12.2286 15.3467 12.5563 15.5042 13.0893C15.6013 13.4225 15.6449 13.7811 15.6491 14.1285C15.6605 15.1761 15.6589 16.2237 15.6573 17.2714C15.6567 17.6412 15.6561 18.0112 15.6561 18.381V18.5624H18.328V18.3571C18.328 17.9051 18.3278 17.4532 18.3275 17.0013C18.327 15.8718 18.3264 14.7423 18.3294 13.6124C18.3308 13.1019 18.276 12.5985 18.1508 12.1049C17.9638 11.3708 17.5771 10.7633 16.9485 10.3246C16.5027 10.0124 16.0133 9.81129 15.4663 9.78879C15.404 9.7862 15.3412 9.78281 15.2781 9.7794C14.9984 9.76428 14.7141 9.74892 14.4467 9.80285C13.6817 9.95613 13.0096 10.3063 12.5019 10.9236C12.4429 10.9944 12.3852 11.0663 12.2991 11.1736L12.2797 11.1979V10.0039ZM5.68164 18.5666H8.33242V10.0095H5.68164V18.5666Z"
+                    fill="#39B7D7"
+                  />
+                </svg>
+              </a>
+              <a href="#"
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.04 21.54C10 21.83 10.97 22 12 22C14.6522 22 17.1957 20.9464 19.0711 19.0711C20.9464 17.1957 22 14.6522 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7362 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2C10.6868 2 9.38642 2.25866 8.17317 2.7612C6.95991 3.26375 5.85752 4.00035 4.92893 4.92893C3.05357 6.8043 2 9.34784 2 12C2 16.25 4.67 19.9 8.44 21.34C8.35 20.56 8.26 19.27 8.44 18.38L9.59 13.44C9.59 13.44 9.3 12.86 9.3 11.94C9.3 10.56 10.16 9.53 11.14 9.53C12 9.53 12.4 10.16 12.4 10.97C12.4 11.83 11.83 13.06 11.54 14.24C11.37 15.22 12.06 16.08 13.06 16.08C14.84 16.08 16.22 14.18 16.22 11.5C16.22 9.1 14.5 7.46 12.03 7.46C9.21 7.46 7.55 9.56 7.55 11.77C7.55 12.63 7.83 13.5 8.29 14.07C8.38 14.13 8.38 14.21 8.35 14.36L8.06 15.45C8.06 15.62 7.95 15.68 7.78 15.56C6.5 15 5.76 13.18 5.76 11.71C5.76 8.55 8 5.68 12.32 5.68C15.76 5.68 18.44 8.15 18.44 11.43C18.44 14.87 16.31 17.63 13.26 17.63C12.29 17.63 11.34 17.11 11 16.5L10.33 18.87C10.1 19.73 9.47 20.88 9.04 21.57V21.54Z"
+                    fill="#39B7D7"
+                  />
+                </svg>
+              </a>
+            </div>
+            <div class="footer-bottom-links">
+              <a href="#">Privacy policy</a>
+              <a href="#">Terms and Conditions</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // Modal functionality
+      const modalOverlay = document.getElementById("modalOverlay");
+      const modal = document.getElementById("modal");
+
+      // Show modal
+      function showModal() {
+        modalOverlay.classList.remove("hidden");
+        document.body.style.overflow = "hidden";
+      }
+
+      // Hide modal
+      function hideModal() {
+        modalOverlay.classList.add("hidden");
+        document.body.style.overflow = "auto";
+      }
+
+      // Go to home
+      function goHome() {
+        hideModal();
+      }
+
+      // Close modal when clicking outside of it
+      modalOverlay.addEventListener("click", function (event) {
+        if (event.target === modalOverlay) {
+          hideModal();
+        }
+      });
+
+      // Close modal with Escape key
+      document.addEventListener("keydown", function (event) {
+        if (
+          event.key === "Escape" &&
+          !modalOverlay.classList.contains("hidden")
+        ) {
+          hideModal();
+        }
+      });
+
+      // Prevent modal from closing when clicking inside the modal
+      modal.addEventListener("click", function (event) {
+        event.stopPropagation();
+      });
+
+      document.querySelectorAll(".place-order-btn").forEach((button) => {
+        button.addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent default form submission
+          showModal(); // Show the modal
+        });
+      });
+    </script>
+  </body>
+</html>
