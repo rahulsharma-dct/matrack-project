@@ -397,6 +397,10 @@
   color: rgb(18, 40, 46, 0.7);
 }
 
+.hardware {
+  gap: 86px;
+}
+
 /* Mobile Styles: stack + resize */
 @media (max-width: 480px) {
   .qty-price-row {
