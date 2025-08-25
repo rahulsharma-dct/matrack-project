@@ -639,33 +639,39 @@
 
           <!-- Filter Buttons (Mobile) -->
           <div
-            class="d-flex d-lg-none justify-content-between my-2 gap-2 px-1"
-            style="flex-wrap: nowrap"
+            class="d-flex d-lg-none my-2 gap-2"
+            style="
+              flex-wrap: nowrap;
+              width: 100%;
+              padding-left: 10px;
+              padding-right: 10px;
+            "
           >
             <button
               class="btn fw-semibold py-3 flex-fill active"
               style="
                 background: linear-gradient(135deg, #e3f6fc 0%, #f7fcfe 100%);
                 color: #3c586f;
+                width: 25%;
               "
             >
               All
             </button>
             <button
               class="btn fw-semibold py-3 flex-fill"
-              style="background: #f3f4f6; color: #46516c"
+              style="background: #f3f4f6; color: #46516c; width: 25%"
             >
               ELD's
             </button>
             <button
               class="btn fw-semibold py-3 flex-fill"
-              style="background: #f3f4f6; color: #46516c"
+              style="background: #f3f4f6; color: #46516c; width: 25%"
             >
               Asset Trackers
             </button>
             <button
               class="btn fw-semibold py-3 flex-fill"
-              style="background: #f3f4f6; color: #46516c"
+              style="background: #f3f4f6; color: #46516c; width: 25%"
             >
               Vehicle Trackers
             </button>
@@ -682,7 +688,7 @@
                 <!-- Image and Device Label (on top for mobile, left on desktop) -->
                 <div class="col-md-3 text-center text-md-start mb-3 mb-md-0">
                   <span
-                    class="badge mb-2 px-3 py-2"
+                    class="badge badge--styling mb-2 px-3 py-2"
                     style="
                       background: linear-gradient(
                         135deg,
@@ -700,8 +706,7 @@
                   <img
                     src="img/image (29).png"
                     alt="Matrack ELD"
-                    class="img-fluid"
-                    style="max-width: 270px"
+                    class="img-fluid image--styling"
                   />
                 </div>
                 <!-- Details -->
@@ -724,12 +729,11 @@
                   </p>
                   <a
                     href="#"
-                    class="text-info mb-2 d-block"
+                    class="text-info mb-2 d-block line--none"
                     style="
                       font-size: 15px;
-                      text-decoration: none;
-                      border-bottom: 1px solid #ededed;
                       padding-bottom: 15px;
+                      color: #148899;
                     "
                     >Read more</a
                   >
@@ -751,7 +755,7 @@
                       </div>
                     </div>
 
-                    <div class="d-flex gap-3 flex-wrap">
+                    <div class="d-flex gap-3">
                       <!-- BASIC PLAN CARD -->
                       <div
                         class="plan-card plan-card-active flex-fill position-relative"
@@ -790,44 +794,50 @@
                         </div>
                         <span class="fw-bold plan-card-price">
                           $19.95
-                          <span class="text-muted-1">/month each</span>
+                          <span class="text-muted-1 li--styling"
+                            >/month each</span
+                          >
                         </span>
                         <ul class="mt-3 ps-3 mb-0 plan-list">
-                          <li>HOS logs</li>
-                          <li>FMCSA compliance</li>
+                          <li class="li--styling">HOS logs</li>
+                          <li class="li--styling">FMCSA compliance</li>
                         </ul>
                       </div>
                       <!-- PREMIUM PLAN CARD -->
                       <div class="plan-card flex-fill position-relative">
                         <div
-                          class="d-flex justify-content-between align-items-center mb-2"
+                          class="d-flex justify-content-between gap-1 align-items-center mb-2"
                         >
                           <span class="badge plan-premium-badge">Premium</span>
                           <span class="plan-card-radio"></span>
                         </div>
-                        <span class="fw-bold plan-card-price">
+                        <span class="fw-bold plan-card-price styling--card">
                           $24.95
-                          <span class="text-muted-1">/month each</span>
+                          <span class="text-muted-1 li--styling"
+                            >/month each</span
+                          >
                         </span>
                         <ul class="mt-3 ps-3 mb-0 plan-list">
                           <li>
-                            <span class="fw-semibold"
+                            <span class="fw-semibold li--styling"
                               ><span class="text-info">All</span> Basic
                               features</span
                             >
                           </li>
-                          <li class="fw-semibold">
+                          <li class="fw-semibold li--styling">
                             <span class="text-info">Real-time</span> GPS
                           </li>
-                          <li>IFTA reports</li>
-                          <li>Alerts</li>
+                          <li class="li--styling">IFTA reports</li>
+                          <li class="li--styling">Alerts</li>
                         </ul>
                       </div>
                     </div>
                   </div>
                   <div class="qty-price-row">
                     <div>
-                      <label class="qty-label">Device Quantity:</label>
+                      <label class="qty-label qty-label--styling"
+                        >Device Quantity:</label
+                      >
                     </div>
                     <div class="d-flex align-items-center qty-price-row-1">
                       <div class="quantity-box">
@@ -837,7 +847,9 @@
                       </div>
                       <div class="d-flex align-items-md-start dollar">
                         <span class="price-main">$59.85</span>
-                        <span class="price-detail"> / 3 months in total</span>
+                        <span class="price-detail">
+                          /3 Devices + 3 months in total</span
+                        >
                       </div>
                       <!-- Mobile/Asset tracker ke liye: /3 Devices + 3 months in total -->
                     </div>
@@ -853,7 +865,7 @@
               >
                 <div>
                   <span
-                    class="badge mb-2 px-3 py-2"
+                    class="badge badge-assets--styling mb-2 px-3 py-2"
                     style="
                       background: linear-gradient(
                         135deg,
@@ -872,7 +884,7 @@
                     src="img/product2.png"
                     alt="MA Asset Classic"
                     class="img-fluid product-1"
-                    style="max-width: 302px; padding-top: 29px"
+                    style="max-width: 302px"
                   />
                 </div>
                 <div class="flex-fill">
@@ -883,34 +895,40 @@
                     enduring battery power, this piece of equipment practically
                     sells itself.
                   </p>
-                  <div class="read-more">
+                  <div class="read-more line--none">
                     <a
                       href="#"
                       class="text-info d-inline-block mb-2"
-                      style="font-size: 15px; text-decoration: none"
+                      style="font-size: 15px; color: #148899"
                       >Read more</a
                     >
                   </div>
                   <div class="price-card">
                     <div class="price-card-col">
                       <div class="price-label">Price per device</div>
-                      <div class="d-flex align-items-lg-start">
+                      <div class="d-flex align-items-lg-start card--styling">
                         <span class="price-value">$50</span>
-                        <span class="price-desc">/pay once for device*</span>
+                        <span class="price-desc price--desc--styling"
+                          >/pay once for device*</span
+                        >
                       </div>
                     </div>
                     <div class="price-card-col border-col">
                       <div class="price-label">Monthly plan cost</div>
-                      <div class="d-flex align-items-lg-start">
+                      <div class="d-flex align-items-lg-start card--styling">
                         <span class="price-value">$11.95</span>
-                        <span class="price-desc">/month each</span>
+                        <span class="price-desc price--desc--styling"
+                          >/month each</span
+                        >
                       </div>
                     </div>
                   </div>
 
                   <div class="qty-price-row">
                     <div>
-                      <label class="qty-label">Device Quantity:</label>
+                      <label class="qty-label qty-label--styling"
+                        >Device Quantity:</label
+                      >
                     </div>
                     <div class="d-flex align-items-center qty-price-row-1">
                       <div class="quantity-box">
@@ -920,7 +938,9 @@
                       </div>
                       <div class="d-flex align-items-md-start dollar">
                         <span class="price-main">$59.85</span>
-                        <span class="price-detail"> / 3 months in total</span>
+                        <span class="price-detail">
+                          /3 Devices + 3 months in total</span
+                        >
                       </div>
                       <!-- Mobile/Asset tracker ke liye: /3 Devices + 3 months in total -->
                     </div>
